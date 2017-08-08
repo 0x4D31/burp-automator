@@ -44,8 +44,7 @@ ASCII = r"""
                         /_/             
          burpa version 0.1 / by 0x4D31  
 
-###################################################
-"""
+###################################################"""
 PROXY_URL = None
 PROXY_PORT = None
 API_PORT = None
@@ -416,5 +415,5 @@ def main():
 
 
 if __name__ == '__main__':
-    print('\n'.join(ASCII.splitlines()))
+    print(ASCII)
     main()
