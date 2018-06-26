@@ -22,7 +22,6 @@ import tempfile
 import time
 
 import requests
-from slackclient import SlackClient
 
 __author__ = 'Adel "0x4d31" Karimi'
 __version__ = '0.1'
@@ -298,6 +297,7 @@ def scan_report(api_port, proxy_url, rtype, url_prefix):
 
 
 def slack_report(api_token, fname):
+    from slackclient import SlackClient
     file = os.path.join(tempfile.gettempdir(), fname)
     sc = SlackClient(api_token)
     response = sc.api_call(
